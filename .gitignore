@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.log
+build/
+release/app/
+release/try-current/
+release/*.exe
+.venv/
+venv/
+
