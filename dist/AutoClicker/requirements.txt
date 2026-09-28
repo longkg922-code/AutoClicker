@@ -1,0 +1,6 @@
+pyautogui
+pynput
+pystray
+Pillow
+PyInstaller
+
