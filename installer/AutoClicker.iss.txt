@@ -1,0 +1,51 @@
+#define MyAppName "AutoClicker"
+#define MyAppVersion "3.2.0"
+#define MyAppPublisher "AutoClicker"
+#define MyAppExeName "AutoClicker.exe"
+
+[Setup]
+AppId={{A5F3F4D8-31D0-4C95-9C8E-AUTOCLICKER31}}
+AppName={#MyAppName}
+AppVersion={#MyAppVersion}
+AppPublisher={#MyAppPublisher}
+
+DefaultDirName={autopf}\AutoClicker
+
+DefaultGroupName={#MyAppName}
+
+OutputDir=..\release
+OutputBaseFilename=AutoClicker-3.2.0-Setup
+
+Compression=lzma
+SolidCompression=yes
+
+WizardStyle=modern
+
+PrivilegesRequired=lowest
+
+UninstallDisplayIcon={app}\AutoClicker.exe
+
+[Files]
+Source: "..\release\app\AutoClicker\*"; \
+    DestDir: "{app}"; \
+    Flags: ignoreversion recursesubdirs createallsubdirs
+
+[Icons]
+Name: "{group}\AutoClicker"; \
+    Filename: "{app}\AutoClicker.exe"
+
+Name: "{autodesktop}\AutoClicker"; \
+    Filename: "{app}\AutoClicker.exe"; \
+    Tasks: desktopicon
+
+[Tasks]
+Name: "desktopicon"; \
+    Description: "Táº¡o shortcut trÃªn Desktop"; \
+    GroupDescription: "Shortcut:"
+
+[Run]
+Filename: "{app}\AutoClicker.exe"; \
+    Description: "Cháº¡y AutoClicker"; \
+    Flags: nowait postinstall skipifsilent
+
+
